@@ -1,0 +1,27 @@
+import 'dart:io';
+
+void main() {
+  String venda1 = stdin.readLineSync()!;
+  String venda2 = stdin.readLineSync()!;
+
+  final List<String> vendaSeparada = venda1.split(" ");
+  int item = int.tryParse(vendaSeparada[0]) ?? 0;
+  int qtd = int.tryParse(vendaSeparada[1]) ?? 0;
+  double valorPeca = double.tryParse(vendaSeparada[2]) ?? 0.0;
+
+  final List<String> vendaSeparada2 = venda2.split(" ");
+  int item2 = int.tryParse(vendaSeparada2[0]) ?? 0;
+  int qtd2 = int.tryParse(vendaSeparada2[1]) ?? 0;
+  double valorPeca2 = double.tryParse(vendaSeparada2[2]) ?? 0.0;
+
+  var fecharVenda1 = (qtd * valorPeca);
+  var fecharVenda2 = (qtd2 * valorPeca2);
+
+  var total = fecharVenda1 + fecharVenda2;
+
+  var totalPagar = total.toStringAsFixed(2);
+
+  print('TOTAL 1 $fecharVenda1');
+  print('TOTAL 2 $fecharVenda2');
+  print('VALOR A PAGAR: R\$ = $totalPagar');
+}

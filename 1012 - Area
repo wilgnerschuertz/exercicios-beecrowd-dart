@@ -1,0 +1,41 @@
+import 'dart:io';
+
+void main() {
+  //Valor de Entrada
+  String valoresEntrada = stdin.readLineSync()!;
+  
+  // Valor constante
+  const pi = 3.14159;
+
+  // Faz a leitura da String e separa os valores 
+  final List<String> valorSeparado = valoresEntrada.split(' ');
+  double a = double.tryParse(valorSeparado[0]) ?? 0.0;
+  double b = double.tryParse(valorSeparado[1]) ?? 0.0;
+  double c = double.tryParse(valorSeparado[2]) ?? 0.0;
+
+  // Calculos da Questão
+  var calculoT = a * c/2;
+  var calculoC =  pi * (c * c);
+  var calculoTR = (a + b)/2 * c;
+  var calculoQ = b * b;
+  var calculoR = b * a;
+
+  // Conversão
+  var T = calculoT.toStringAsFixed(3);
+
+  var C = calculoC.toStringAsFixed(3);
+  
+  var TR = calculoTR.toStringAsFixed(3);
+  
+  var Q = calculoQ.toStringAsFixed(3);
+  
+  var R = calculoR.toStringAsFixed(3);
+
+  // Impressão 
+  print('TRIANGULO: $T');
+  print('CIRCULO: $C');
+  print('TRAPEZIO: $TR');
+  print('QUADRADO: $Q');
+  print('RETANGULO: $R');
+
+}

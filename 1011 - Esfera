@@ -1,0 +1,14 @@
+import 'dart:io';
+
+void main() {
+
+  int? raio = int.parse(stdin.readLineSync()!);
+  
+  const pi = 3.14159;
+
+  var volume = (4/3.0) * pi * (raio * raio * raio);
+
+  var volumeTotal = volume.toStringAsFixed(3);
+
+  print('VOLUME = $volumeTotal');
+}
