@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+
+    int? x = int.parse(stdin.readLineSync()!);
+    double? y = double.parse(stdin.readLineSync()!);
+
+    var calculo = x / y;
+
+    var resultado = calculo.toStringAsFixed(3);
+
+    print('$resultado km/l');
+}

@@ -1,0 +1,19 @@
+import 'dart:io';
+
+void main() {
+
+  String valoresEntrada = stdin.readLineSync()!;
+  
+  final List<String> valorSeparado = valoresEntrada.split(' ');
+  int a = int.tryParse(valorSeparado[0]) ?? 0;
+  int b = int.tryParse(valorSeparado[1]) ?? 0;
+  int c = int.tryParse(valorSeparado[2]) ?? 0;
+
+  if ( a > b && a > c) {
+    print('$a eh o maior');
+  } else if ( b > c ){
+    print('$b eh o maior');
+  } else {
+    print('$c eh o maior');
+  }
+}
