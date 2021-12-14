@@ -1,0 +1,20 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  String x1y1 = stdin.readLineSync()!;
+  String x2y2 = stdin.readLineSync()!;
+
+  final List<String> entrada1 = x1y1.split(' ');
+  double x1 = double.tryParse(entrada1[0]) ?? 0.0;
+  double y1 = double.tryParse(entrada1[1]) ?? 0.0;
+
+  final List<String> entrada2 = x2y2.split(' ');
+  double x2 = double.tryParse(entrada2[0]) ?? 0.0;
+  double y2 = double.tryParse(entrada2[1]) ?? 0.0;
+
+  var calculo = sqrt(pow((x2-x1),2) + pow((y2 - y1), 2));
+  var resultado = calculo.toStringAsFixed(4);
+
+  print('$resultado');
+}

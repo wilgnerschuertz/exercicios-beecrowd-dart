@@ -1,0 +1,47 @@
+import 'dart:io';
+
+void main(){
+
+  int? N = int.parse(stdin.readLineSync()!);
+
+  int X = N;
+
+  double n100, n50, n20, n10, n5, n2, n1 = 0;
+
+      n100 = N / 100;  
+      int a = n100.truncate();
+      N%= 100;
+
+      n50 = N / 50;  
+      int b = n50.truncate();
+      N%= 50;
+
+      n20 = N / 20;  
+      int c = n20.truncate();
+      N%= 20;
+
+      n10 = N / 10;  
+      int d = n10.truncate();
+      N%= 10;
+
+      n5 = N / 5;  
+      int e = n5.truncate();
+      N%= 5;
+
+      n2 = N / 2;  
+      int f = n2.truncate();
+      N%= 2;
+
+      n1 = N / 1;  
+      int g = n1.truncate();
+      N= 1;
+
+  print('$X');
+  print('$a nota(s) de R\$ 100,00');
+  print('$b nota(s) de R\$ 50,00');
+  print('$c nota(s) de R\$ 20,00');
+  print('$d nota(s) de R\$ 10,00');
+  print('$e nota(s) de R\$ 5,00');
+  print('$f nota(s) de R\$ 2,00');
+  print('$g nota(s) de R\$ 1,00');
+}

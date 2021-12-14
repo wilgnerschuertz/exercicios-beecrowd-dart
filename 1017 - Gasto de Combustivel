@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+
+  int? horas = int.parse(stdin.readLineSync()!);
+  int? velocidade = int.parse(stdin.readLineSync()!);
+  const km = 12;
+
+  var calculo = (horas * velocidade)/km;
+  var resultado = calculo.toStringAsFixed(3);
+
+  print('$resultado');
+}
