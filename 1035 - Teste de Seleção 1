@@ -1,0 +1,25 @@
+import 'dart:io';
+
+void main(){
+
+  String N = stdin.readLineSync()!;
+
+  final List<String> entrada1 = N.split(' ');
+  int a = int.tryParse(entrada1[0]) ?? 0;
+  int b = int.tryParse(entrada1[1]) ?? 0;
+  int c = int.tryParse(entrada1[2]) ?? 0;
+  int d = int.tryParse(entrada1[3]) ?? 0;
+
+  int cd = c + d;
+  int ab = a + b;
+
+if ( (b > c) &&  (d > a) && (cd > ab) && (c > 0 && d > 0) && (a % 2 == 0)) {
+
+  print('Valores aceitos');
+
+  } else {
+
+  print('Valores nao aceitos');
+
+  }
+}
