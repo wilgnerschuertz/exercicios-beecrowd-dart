@@ -1,0 +1,77 @@
+import 'dart:io';
+
+void main(){
+
+  String N = stdin.readLineSync()!;
+
+  final List<String> entrada1 = N.split('.');
+  double x1 = double.tryParse(entrada1[0]) ?? 0.0;
+  double x2 = double.tryParse(entrada1[1]) ?? 0.0;
+
+  double n100, n50, n20, n10, n5, n2, n1 = 0;
+  double m50, m25, m10, m5, m1 = 0;
+
+      //CONVERSÃO
+      n100 = x1 / 100;
+      int a = n100.truncate();
+      x1%= 100;
+
+      n50 = x1 / 50;
+      int b = n50.truncate();
+      x1%= 50;
+
+      n20 = x1 / 20;
+      int c = n20.truncate();
+      x1%= 20;
+
+      n10 = x1 / 10;
+      int d = n10.truncate();
+      x1%= 10;
+
+      n5 = x1 / 5;
+      int e = n5.truncate();
+      x1%= 5;
+
+      n2 = x1 / 2;
+      int f = n2.truncate();
+      x1%= 2;
+
+      n1 = x1 / 1;
+      int g = n1.truncate();
+      x1 = 1;
+
+      m50 = x2 / 50;
+      int h = m50.truncate();
+      x2%= 50;
+      
+      m25 = x2 / 25;
+      int i = m25.truncate();
+      x2%= 25;
+
+      m10 = x2 / 10;
+      int j = m10.truncate();
+      x2%= 10;
+
+      m5 = x2 / 5;
+      int k = m5.truncate();
+      x2%= 5;
+
+      m1 = x2 / 1;
+      int l = m1.ceil();
+      x2 = 1;
+
+  print('NOTAS:');
+  print('$a nota(s) de R\$ 100.00');
+  print('$b nota(s) de R\$ 50.00');
+  print('$c nota(s) de R\$ 20.00');
+  print('$d nota(s) de R\$ 10.00');
+  print('$e nota(s) de R\$ 5.00');
+  print('$f nota(s) de R\$ 2.00');
+  print('MOEDAS:');
+  print('$g moeda(s) de R\$ 1.00');
+  print('$h moeda(s) de R\$ 0.50');
+  print('$i moeda(s) de R\$ 0.25');
+  print('$j moeda(s) de R\$ 0.10');
+  print('$k moeda(s) de R\$ 0.05');
+  print('$l moeda(s) de R\$ 0.01');
+}
