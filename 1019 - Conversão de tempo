@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main() {
+
+    int? N = int.parse(stdin.readLineSync()!);
+
+		var horas = N / 3600;
+		var minutos = (N % 3600) / 60;
+		var segundos = (N % 3600) % 60;
+
+    int h = horas.truncate();
+    int m = minutos.truncate();
+    int s = segundos.truncate();
+
+    print('$h:$m:$s');
+}

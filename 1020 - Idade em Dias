@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main() {
+
+    int? N = int.parse(stdin.readLineSync()!);
+
+		var anos = N / 365;
+		var meses = (N % 365) / 30;
+		var dias = (N % 365) % 30;
+
+    int a = anos.truncate();
+    int m = meses.truncate();
+    int d = dias.truncate();
+
+    print('$a ano(s)');
+    print('$m mes(es)');
+    print('$d dia(s)');
+}
