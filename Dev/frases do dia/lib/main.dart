@@ -18,11 +18,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   var _frases = [
-    "Frase 1",
-    "Frase 2",
-    "Frase 3",
-    "Frase 4",
-    "Frase 5",
+    "Eu te amo",
+    "Você é o amor da minha vida",
+    "Sou loucamente apaixonado por você",
+    "Eu te amo incondicionalmente",
+    "Vou cuidar de você a vida todinha",
   ];
 
   var _fraseGerada = "Clique Abaixo";
@@ -41,8 +41,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Frases do Dia"),
-        backgroundColor: Colors.lightBlueAccent,
+        title: Text("Eu te amo"),
+        backgroundColor: Colors.redAccent,
       ),
       body: Center(
         child: Container(
